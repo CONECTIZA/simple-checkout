@@ -1,9 +1,154 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <title>Checkout</title>
   </head>
   <body>
-    
+    <div class="container-fluid h-100">
+      <div class="row justify-content-center h-100">
+        <div class="col-12 col-md-7">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#">Carrinho</a></li>
+              <li class="breadcrumb-item"><a href="#">Login</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Checkout</li>
+            </ol>
+          </nav>
+          <div class="center">
+            <div class="form-group">
+              <h1 class="mg-bottom-md font-weight-light">Digite seu e-mail para prosseguir</h1>
+              <input class="form-control form-control-lg" type="email" name="email" placeholder="E-mail">
+            </div>
+          </div>
+          <div class="login-social-bottom">
+            <p class="font-28 font-weight-light no-margin">ou</p>
+            <div class="social-buttons">
+              <a href="#"><img src="assets/images/003-facebook.png"></a>
+              <a href="#"><img src="assets/images/002-google-plus.png"></a>
+              <a href="#"><img src="assets/images/001-twitter.png"></a>
+            </div>
+            <span class="font-22">Login Social</span>
+          </div>
+        </div>
+        <div class="col-12 col-md-5 bg-gray pd-md">
+          <p>Carrinho</p>
+          <ul class="product-list">
+            <li class="product-list__item">
+              <span class="product-thumbnail">
+                <img class="img-fluid" src="assets/images/product-thumb.jpg">
+              </span>
+              <span class="product-name">
+                <p class="font-weight-bold no-margin">Blazer Greyscon</p>
+                <p>PP</p>
+              </span>
+              <span class="product-quantity text-center" data-quantity="1">
+                <i class="fas fa-plus"></i>
+                <p>1 unid.</p>
+                <i class="fas fa-minus"></i>
+              </span>
+              <span class="product-value text-right" data-price="140"><strong>R$ 140,00</strong></span>
+            </li>
+            <li class="product-list__item">
+              <span class="product-thumbnail">
+                <img class="img-fluid" src="assets/images/product-thumb.jpg">
+              </span>
+              <span class="product-name">
+                <p class="font-weight-bold no-margin">Blazer Greyscon</p>
+                <p>PP</p>
+              </span>
+              <span class="product-quantity text-center" data-quantity="1">
+                <i class="fas fa-plus"></i>
+                <p>1 unid.</p>
+                <i class="fas fa-minus"></i>
+              </span>
+              <span class="product-value text-right" data-price="140"><strong>R$ 140,00</strong></span>
+            </li>
+            <li class="product-list__item">
+              <span class="product-thumbnail">
+                <img class="img-fluid" src="assets/images/product-thumb.jpg">
+              </span>
+              <span class="product-name">
+                <p class="font-weight-bold no-margin">Blazer Greyscon</p>
+                <p>PP</p>
+              </span>
+              <span class="product-quantity text-center" data-quantity="1">
+                <i class="fas fa-plus"></i>
+                <p>1 unid.</p>
+                <i class="fas fa-minus"></i>
+              </span>
+              <span class="product-value text-right" data-price="140"><strong>R$ 140,00</strong></span>
+            </li>
+            <li class="product-list__item">
+              <span class="product-thumbnail">
+                <img class="img-fluid" src="assets/images/product-thumb.jpg">
+              </span>
+              <span class="product-name">
+                <p class="font-weight-bold no-margin">Blazer Greyscon</p>
+                <p>PP</p>
+              </span>
+              <span class="product-quantity text-center" data-quantity="1">
+                <i class="fas fa-plus"></i>
+                <p>1 unid.</p>
+                <i class="fas fa-minus"></i>
+              </span>
+              <span class="product-value text-right" data-price="140"><strong>R$ 140,00</strong></span>
+            </li>
+          </ul>
+          <div class="coupon-price">
+            <div class="row">
+              <div class="col-12 col-sm-9">
+                <input type="text" class="form-control" placeholder="Cupom de desconto">
+              </div>
+              <div class="col-12 col-sm-3">
+                <button type="submit" class="btn btn-secondary btn-block mb-2">aplicar</button>
+              </div>
+            </div>
+          </div>
+          <div class="cart-info">
+            <div class="row mg-top-xxs">
+              <div class="col-12 col-sm-8 text-left">
+                <p class="no-margin">Subtotal</p>
+              </div>
+              <div class="col-12 col-sm-4 text-right">
+                <p class="cart-subtotal no-margin">R$ 760,00</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 col-sm-8 text-left">
+                <p class="no-margin">Entrega</p>
+              </div>
+              <div class="col-12 col-sm-4 text-right">
+                <p class="cart-shipping no-margin">-</p>
+              </div>
+            </div>
+            <div class="dropdown-divider"></div>
+            <div class="row">
+              <div class="col-12 col-sm-8 text-left">
+                <p class="no-margin">Total</p>
+              </div>
+              <div class="col-12 col-sm-4 text-right">
+                <p class="cart-shipping no-margin">R$ 760,00</p>
+              </div>
+            </div>
+            <div class="row mg-top-xxs">
+              <div class="col-12 col-sm-10">
+                <a href="#" class="btn btn-finish btn-lg">finalizar compra <i class="fas fa-chevron-right"></i></a>
+              </div>
+              <div class="col-12 col-sm-2 text-center">
+                <i class="color-orange fas fa-lock font-28"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/app.js"></script>
   </body>
 </html>
