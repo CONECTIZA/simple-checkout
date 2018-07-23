@@ -28,6 +28,15 @@ body {
   }
 }
 
+.form-group {
+  margin: 0;
+
+  &.form-group--login,
+  &.form-group--nova-conta {
+    display: none;
+  }
+}
+
 
 /* GENERAL CLASSES */
 .no-padding { padding: 0 !important; }
@@ -76,10 +85,22 @@ body {
       background: linear-gradient(180deg, rgba(82,42,74,1) 0%, rgba(114,51,102,1) 100%);
     }
   }
+
+  &.btn-prosseguir {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 
 /* PRODUCT LIST */
+.passepag {
+  position: absolute;
+  top: 0;
+  right: 25px;
+}
+
 .product-list {
   width: 100%;
   float: left;
