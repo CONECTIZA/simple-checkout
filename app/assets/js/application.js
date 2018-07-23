@@ -1,4 +1,14 @@
 $(document).ready(function() {
+  function updateTotal() {
+    var totalValue = 0;
+
+    $('.product-value').each(function() {
+      totalValue += parseInt($(this).attr('data-price-unid'));
+    });
+
+    $('.cart-subtotal, .cart-value').html('R$ '+totalValue+',00');
+  }
+
   $('.product-quantity i').on('click', function() {
     var qtd = parseInt($(this).parent().attr('data-quantity')),
         price = parseInt($(this).closest('.product-list__item').find('.product-value').attr('data-price'));
@@ -17,5 +27,10 @@ $(document).ready(function() {
 
     $(this).parent().find('p').html(qtd + ' unid.');
     $(this).closest('.product-list__item').find('.product-value strong').html('R$ ' + qtd*price + ',00');
+    $(this).closest('.product-list__item').find('.product-value').attr('data-price-unid', qtd*price);
+
+    updateTotal();
   });
+
+  updateTotal();
 });
