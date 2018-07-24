@@ -34,9 +34,13 @@
               <a href="#" class="btn btn-finish btn-lg btn-block mg-top-xxs">Finalizar compra <i class="fas fa-chevron-right"></i></a>
             </div>
             <div class="form-group form-group--nova-conta">
-              <h1 class="mg-bottom-xxs font-weight-light">Nova conta:</h1>
-              <p class="font-22 user-email mg-bottom-md"></p>
-              <p class="font-22 mg-top-sm">Endereço de entrega:</p>
+              <div class="row">
+                <div class="col-12">
+                  <h1 class="mg-bottom-xxs font-weight-light">Nova conta:</h1>
+                  <p class="font-22 user-email mg-bottom-md"></p>
+                  <p class="font-22 mg-top-sm">Endereço de entrega:</p>
+                </div>
+              </div>
               <div class="row mg-bottom-xxs">
                 <div class="col-12">
                   <input class="form-control form-control-lg" type="text" name="cep" placeholder="CEP">
@@ -47,7 +51,7 @@
                   <input class="form-control form-control-lg" type="text" name="logadouro" placeholder="Endereço">
                 </div>
                 <div class="col-12 col-sm-4">
-                  <input class="form-control form-control-lg" type="text" name="numero" placeholder="N">
+                  <input class="form-control form-control-lg" type="text" name="numero" placeholder="Nº">
                 </div>
               </div>
               <div class="row">
@@ -58,7 +62,186 @@
                   <input class="form-control form-control-lg" type="text" name="estado" placeholder="Estado">
                 </div>
               </div>
-              <a href="#" class="btn btn-finish btn-lg btn-block mg-top-xxs">Finalizar compra <i class="fas fa-chevron-right"></i></a>
+              <div class="row mg-top-md">
+                <div class="col-12">
+                  <p class="font-22">Conta</p>
+                </div>
+                <div class="col-12 col-sm-6 mg-bottom-xxs">
+                  <input class="form-control form-control-lg" type="text" name="nome" placeholder="Nome">
+                </div>
+                <div class="col-12 col-sm-6 mg-bottom-xxs">
+                  <input class="form-control form-control-lg" type="text" name="sobrenome" placeholder="Sobrenome">
+                </div>
+                <div class="col-12 col-sm-6">
+                  <input class="form-control form-control-lg" type="text" name="telefone" placeholder="Telefone">
+                </div>
+                <div class="col-12 col-sm-6">
+                  <input class="form-control form-control-lg" type="password" name="senha" placeholder="Senha">
+                </div>
+                <div class="col-12">
+                  <a href="#" class="btn btn-finish btn-lg btn-block mg-top-xxs">criar conta e finalizar <i class="fas fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="form-group form-group--entrega">
+              <div class="row">
+                <div class="col-12">
+                  <h1 class="mg-bottom-xxs font-weight-light">Entrega</h1>
+                  <p class="font-22 user-name no-margin"></p>
+                  <p class="font-22 user-email mg-bottom-sm"></p>
+                  <p class="font-22 user-address-01 no-margin"></p>
+                  <p class="font-22 user-address-02 no-margin"></p>
+                  <p class="font-22 user-address-03 no-margin"></p>
+                  <p class="font-22 user-address-04 mg-bottom-sm"></p>
+                  <a href="#" class="color-orange font-16">Entregar em outro endereço</a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <p class="font-22">Métodos de envio</p>
+                </div>
+                <div class="col-12">
+                  <div class="custom-control custom-radio mg-bottom-xxs">
+                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label text-center" for="customRadio1" data-toggle="tooltip" data-placement="top" title="Tooltip de ajuda">
+                      <span>SEDEX</span><span>7 dias úteis</span><span>R$42,80</span>
+                    </label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                    <label class="custom-control-label text-center" for="customRadio2" data-toggle="tooltip" data-placement="top" title="Tooltip de ajuda">
+                      <span>Fedex</span><span>2 dias úteis</span><span>R$12,80</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <a href="#" class="btn btn-finish btn-lg btn-block mg-top-xxs">prosseguir <i class="fas fa-chevron-right"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="form-group form-group--pagamento">
+              <div class="row">
+                <div class="col-12">
+                  <h1 class="mg-bottom-xxs font-weight-light">Pague com Cartão de Crédito</h1>
+                  <p class="font-16 mg-bottom-xxs font-weight-light">Todas as transações são criptofrafadas. A informação do cartão nunca é armazenada.</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="accordion" id="accordionExample">
+                    <div class="card">
+                      <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Cartão de Crédito <img class="float-right" src="assets/images/cards.png">
+                          </button>
+                        </h5>
+                      </div>
+
+                      <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body">
+                          <div class="row mg-bottom-xxs">
+                            <div class="col-12">
+                              <input class="form-control form-control-lg" type="text" name="numero-cartao" placeholder="Número do cartão">
+                            </div>
+                          </div>
+                          <div class="row mg-bottom-xxs">
+                            <div class="col-12 col-sm-6">
+                              <input class="form-control form-control-lg" type="text" name="nome-cartao" placeholder="Nome no cartão">
+                            </div>
+                            <div class="col-12 col-sm-3">
+                              <input class="form-control form-control-lg" type="text" name="validade" placeholder="MM AA">
+                            </div>
+                            <div class="col-12 col-sm-3">
+                              <input class="form-control form-control-lg" type="text" name="cvv" placeholder="CVV">
+                            </div>
+                          </div>
+                          <div class="row mg-bottom-xxs">
+                            <div class="col-12 col-sm-6">
+                              <input class="form-control form-control-lg" type="text" name="CPF" placeholder="CPF">
+                            </div>
+                            <div class="col-12 col-sm-6">
+                              <div class="form-group form-group--select-payment">
+                                <label for="exampleFormControlSelect1">Parcelas</label>
+                                <select class="form-control form-control-lg" id="exampleFormControlSelect1">
+                                  <option>1x de 612,80</option>
+                                  <option>2x de 612,80</option>
+                                  <option>3x de 612,80</option>
+                                  <option>4x de 612,80</option>
+                                  <option>5x de 612,80</option>
+                                </select>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12">
+                              <p class="font-22 no-margin">Endereço de cobrança</p>
+                            </div>
+                            <div class="col-12">
+                              <div class="custom-control custom-radio mg-bottom-xxs">
+                                <input type="radio" id="endcobranca1" name="end-cobranca" class="custom-control-input">
+                                <label class="custom-control-label text-center" for="endcobranca1" data-toggle="tooltip" data-placement="top" title="Tooltip de ajuda">
+                                  <span>Mesmo que o <strong>Endereço de entrega</strong></span>
+                                </label>
+                              </div>
+                              <div class="custom-control custom-radio">
+                                <input type="radio" id="endcobranca2" name="end-cobranca" class="custom-control-input">
+                                <label class="custom-control-label text-center" for="endcobranca2">
+                                  <span>Usar um endereço de cobrança diferente</strong></span>
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-12 col-sm-7">
+                              <div class="custom-control custom-radio">
+                                <input type="radio" id="newsletter-check" name="newslettercheck" class="custom-control-input">
+                                <label class="custom-control-label no-border text-left" for="newsletter-check">
+                                  Cadastrar e-mail na newsletter
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-12 col-sm-5">
+                              <a href="#" class="btn btn-finish btn-lg btn-block mg-top-xxs">revisar pedido <i class="fas fa-chevron-right"></i></a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Boleto Bancário
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="headingThree">
+                        <h5 class="mb-0">
+                          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Débito Online
+                          </button>
+                        </h5>
+                      </div>
+                      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body">
+                          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
             </div>
           </div>
           <div class="login-social-bottom">

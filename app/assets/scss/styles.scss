@@ -32,11 +32,84 @@ body {
   margin: 0;
 
   &.form-group--login,
-  &.form-group--nova-conta {
+  &.form-group--nova-conta,
+  &.form-group--entrega,
+  &.form-group--pagamento {
     display: none;
+  }
+
+  &.form-group--select-payment {
+    label {
+      color: #999999;
+      font-size: 10px;
+      position: absolute;
+      top: 6px;
+      left: 28px;
+    }
+
+    select {
+      font-size: 16px;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      text-indent: 1px;
+      text-overflow: '';
+      padding: 10px 0 0 10px;
+    }
   }
 }
 
+.custom-control {
+  padding-left: 0;
+}
+
+.custom-control-label {
+  width: 100%;
+  padding: 12px 12px 12px 35px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+
+  span {
+    &:nth-child(1) {
+      float: left;
+    }
+
+    &:nth-child(3) {
+      float: right;
+    }
+  }
+
+  &:before {
+    top: 15px;
+    left: 10px;
+  }
+
+  &.no-border {
+    border: 0;
+  }
+}
+
+.tooltip-inner {
+  background: #bbe086;
+  color: #000000;
+}
+
+.tooltip {
+  .arrow {
+    right: 10px;
+
+    &:before {
+      border-top-color: #bbe086;
+    }
+  }
+}
+
+.card-header {
+  background: #ffffff;
+}
+
+.card-body {
+  background: #f2f2f2;
+}
 
 /* GENERAL CLASSES */
 .no-padding { padding: 0 !important; }
@@ -44,10 +117,12 @@ body {
 
 .mg-top-xxs { margin-top: 15px; }
 .mg-top-xs { margin-top: 30px; }
+.mg-top-sm { margin-top: 45px; }
 .mg-top-md { margin-top: 60px; }
 
 .mg-bottom-xxs { margin-bottom: 15px; }
 .mg-bottom-xs { margin-bottom: 30px; }
+.mg-bottom-sm { margin-bottom: 45px; }
 .mg-bottom-md { margin-bottom: 60px; }
 
 .bg-gray {
@@ -72,6 +147,7 @@ body {
 
 .color-orange { color: #f26b35; }
 
+.font-16 { font-size: 16px; }
 .font-22 { font-size: 22px; }
 .font-28 { font-size: 28px; }
 

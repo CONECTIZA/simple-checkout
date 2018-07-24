@@ -20,6 +20,7 @@ gulp.task('sass', function () {
 gulp.task('scripts', function() {
   return gulp.src([
       'node_modules/jquery/dist/jquery.js',
+      'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
       'node_modules/jquery-mask-plugin/dist/jquery.mask.js',
       'assets/js/application.js',
     ])

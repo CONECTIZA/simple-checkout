@@ -9,6 +9,10 @@ $(document).ready(function() {
     $('.cart-subtotal, .cart-value').html('R$ '+totalValue+',00');
   }
 
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+  });
+
   $('.product-quantity i').on('click', function() {
     var qtd = parseInt($(this).parent().attr('data-quantity')),
         price = parseInt($(this).closest('.product-list__item').find('.product-value').attr('data-price'));
@@ -38,7 +42,7 @@ $(document).ready(function() {
     setTimeout(function() {
       if($(_this).is(':valid')) {
         $('.form-group--email h1').html('Clique em prosseguir');
-        $('.btn-finish').hide();
+        $('.form-group--email .btn-finish').hide();
         $('.btn-prosseguir').show();
         $(this).removeClass('is-invalid').addClass('.is-valod');
         $('.login-social-bottom').hide();
@@ -82,11 +86,28 @@ $(document).ready(function() {
         Accept: "text/plain; charset=utf-8",         
                 "Content-Type": "text/plain; charset=utf-8"
       }).done(function(data) {
-        $('input[name="logadouro"]').val(data.logradouro).attr('disabled');
-        $('input[name="bairro"]').val(data.bairro).attr('disabled');
-        $('input[name="estado"]').val(data.uf).attr('disabled');
+        $('input[name="logadouro"]').val(data.logradouro).attr('disabled', 'true');
+        $('input[name="bairro"]').val(data.bairro).attr('disabled', 'true');
+        $('input[name="estado"]').val(data.uf).attr('disabled', 'true');
       });
     }, 1000);
+  });
+
+  $('.form-group--nova-conta .btn-finish').on('click', function() {
+
+    $('.user-name').html($('input[name="nome"]').val() + ' '+ $('input[name="sobrenome"]').val());
+    $('.user-address-01').html($('input[name="logadouro"]').val() + ', ' + $('input[name="numero"]').val());
+    $('.user-address-02').html($('input[name="bairro"]').val());
+    $('.user-address-03').html($('input[name="estado"]').val());
+    $('.user-address-04').html($('input[name="cep"]').val());
+
+    $(this).closest('.form-group--nova-conta').hide();
+    $('.form-group--entrega').show();
+  });
+
+  $('.form-group--entrega .btn-finish').on('click', function() {
+    $(this).closest('.form-group--entrega').hide();
+    $('.form-group--pagamento').show();
   });
 
   updateTotal();
